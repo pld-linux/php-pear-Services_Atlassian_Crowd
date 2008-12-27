@@ -7,7 +7,7 @@ Summary:	%{_pearname} - a package to use Atlassian Crowd from PHP
 Summary(pl.UTF-8):	%{_pearname} - pakiet do korzystania z Atlassian Crowd
 Name:		php-pear-%{_pearname}
 Version:	0.9.4
-Release:	1
+Release:	2
 License:	Apache
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -67,8 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/Services/Atlassian/Crowd
-%{php_pear_dir}/Services/Atlassian/Crowd.php
+%{php_pear_dir}/Services/Atlassian
 
 %files tests
 %defattr(644,root,root,755)
