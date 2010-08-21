@@ -1,13 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Services
-%define		_subclass	Atlassian_Crowd
 %define		_status		beta
 %define		_pearname	Services_Atlassian_Crowd
 Summary:	%{_pearname} - a package to use Atlassian Crowd from PHP
 Summary(pl.UTF-8):	%{_pearname} - pakiet do korzystania z Atlassian Crowd
 Name:		php-pear-%{_pearname}
 Version:	0.9.5
-Release:	1
+Release:	2
 License:	Apache
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,6 +14,7 @@ URL:		http://pear.php.net/package/Services_Atlassian_Crowd/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
+Requires:	php-soap
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -42,9 +41,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
